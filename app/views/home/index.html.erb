@@ -1,0 +1,13 @@
+<h1>Ajax 아작내기 1</h1>
+<p>ajax 기초편</p>
+<form action="/home/create" method="POST">
+    <input id="comment_body" type="text" name="body">
+    <input type="submit">
+</form>
+<div id="body">
+    <% @comments.each do |c| %>
+        <%= c.body%>
+        <hr>
+    <% end %>
+</div>
+
