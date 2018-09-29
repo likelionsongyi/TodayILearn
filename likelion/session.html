@@ -1,0 +1,57 @@
+<style>
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 4fr;
+    grid-template-rows: 100px 200px 300px;
+    /* justify-content: space-between; */
+    grid-auto-rows: 150px;
+    grid-auto-columns: 150px;
+    /* grid-gap: 2px 5px; */
+
+    width: 800px;
+    border: 2px solid red;
+    margin: auto;
+}
+.container > div {
+    padding: 1rem;
+    border: thin solid gray;
+}
+.flexible{
+  /* grid-column-start: 1;
+  grid-column-end: 8; */
+  /* grid-column: span 2;
+  grid-row: span 2; */
+  grid-area: 1 / 2 / 3 / 4;
+}
+.item1 {
+    grid-area: span 2 /span 2;
+}
+.item4{
+  grid-area: span 2 /span 2;
+}
+.item5{
+  grid-column: span 2;
+}
+.item6{
+
+}
+.a {
+  display: flex;
+  grid-template-columns: auto auto auto;
+  width: 800px;
+  border: 2px solid blue;
+}
+</style>
+
+<div class="container">
+    <div class="item1">Item1</div>
+    <div class="item">Item2</div>
+    <div class="item">Item3</div>
+    <div class="item4">Item4</div>
+    <div class="item5">Item5</div>
+    <div class="item">Item6</div>
+    <div class="item">Item7</div>
+</div>
+
+<div class="a">
+</div>
